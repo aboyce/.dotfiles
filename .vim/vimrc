@@ -1,0 +1,31 @@
+" spelling
+set spell
+set spelllang=en_gb
+
+" ensure tabs are spaces
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+
+" numbers on the left hand side
+set number
+set relativenumber
+
+" keep a buffer in the background in case you forget to save
+set hidden
+
+" prevent the text from wrapping
+set nowrap
+
+" hightlight the result as you search with /
+set incsearch
+
+" start scrolling when you are close to the edge of the file
+set scrolloff=8
+
+" show an error/linting column on the left hand side
+set signcolumn=yes
+
+" exit out of INSERT mode quickly
+imap ii <Esc>
