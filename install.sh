@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # vim
 
 echo "Set up vim started"
