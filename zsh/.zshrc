@@ -5,7 +5,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="simple"
+ZSH_THEME="aboyce"
 
 # Automatically update without prompting.
 DISABLE_UPDATE_PROMPT="true"
@@ -22,7 +22,7 @@ DISABLE_UPDATE_PROMPT="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(git npm sudo yarn)
+plugins=(git npm sudo yarn web-search zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,6 +54,12 @@ source $ZSH/oh-my-zsh.sh
 # Start dbus to internally communicate
 #sudo /etc/init.d/dbus start &> /dev/null
 
+## Set up Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+## If the autosuggestion plugin is unavailable run the following
+# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+## If you see this, the plugin is probably out of date now, pull down the latest changs
+# git -C ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions pull
