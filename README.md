@@ -1,31 +1,10 @@
 # dotfiles
 
-## vim
+## Installation
 
-How to link up `vim`:
-
-```bash
-ln -s "$(pwd)/.vim" ~/
-```
-
-To remove:
+How to install:
 
 ```bash
-rm ~/.vim
-```
-
-## zsh
-
-How to link up `zsh`:
-
-```bash
-rm ~/.zshrc
-
-ln -s "$(pwd)/zsh/.zshrc" ~/.zshrc
-```
-
-To remove:
-
-```bash
-rm ~/.zshrc
+# ensure you are this repository
+./install.sh
 ```
