@@ -9,6 +9,17 @@ else
   echo "Pre-Reqs: .config folder did not exist, created"
 fi
 
+# tmux
+if [[ -d ~/.config/tmux ]]
+then
+  echo "Tmux: Removed existing link"
+  rm -f ~/.config/tmux
+else
+  echo "Tmux: Had not been linked before"
+fi
+ln -sf "$(pwd)/tmux/" ~/.config/
+echo "Tmux: Linked up configuration"
+
 # vim
 if [[ -d ~/.vim ]]
 then
