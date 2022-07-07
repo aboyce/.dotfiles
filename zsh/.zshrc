@@ -1,3 +1,7 @@
+#############
+## GENERAL ##
+#############
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -19,9 +23,6 @@ DISABLE_UPDATE_PROMPT="true"
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 plugins=(git npm sudo yarn web-search zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
@@ -40,26 +41,36 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+##############
+## EXTERNAL ##
+##############
 
 # Set DISPLAY variable to the IP automatically assigned to WSL2 (this was added for Cypress support in WSL - more info https://nickymeuleman.netlify.app/blog/gui-on-wsl2-cypress)
 #export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 # Start dbus to internally communicate
 #sudo /etc/init.d/dbus start &> /dev/null
 
-## Set up Node Version Manager
+# Set up Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-## If the autosuggestion plugin is unavailable run the following
+#############
+## ALIASES ##
+#############
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+
+alias v="nvim"
+
+##################
+## MANUAL STEPS ##
+##################
+
+# If the autosuggestion plugin is unavailable run the following
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-## If you see this, the plugin is probably out of date now, pull down the latest changs
+# If you see this, the plugin is probably out of date now, pull down the latest changs
 # git -C ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions pull
