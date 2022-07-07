@@ -30,6 +30,11 @@ Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 
+" telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-telescope/telescope.nvim'
+
 " code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -41,6 +46,10 @@ filetype plugin on
 "" ----------------------------------------------------
 "" CODE COMPLETION - START
 "" ----------------------------------------------------
+
+" telescope configuration
+nnoremap <C-p> :lua require('telescope.builtin').find_files()<CR>
+nnoremap <C-g> :lua require('telescope.builtin').git_status()<CR>
 
 " airline configuration
 let g:airline#extension#capslock#enabled = 1
@@ -76,6 +85,8 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm(): "\<C-g>u\<CR>
 "" ----------------------------------------------------
 "" CODE COMPLETION - END
 "" ----------------------------------------------------
+
+lua require('aboyce')
 
 let mapLeader = " "
 
