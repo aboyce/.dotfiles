@@ -25,7 +25,7 @@ if [[ -d ~/.vim ]]
 then
   echo "Vim: Removed existing link"
   rm -f ~/.vim
-else 
+else
   echo "Vim: Had not been linked before"
 fi
 ln -sf "$(pwd)/vim/.vim" ~/
@@ -57,7 +57,7 @@ echo "Zsh: Linked up configuration"
 if [[ -f ~/.oh-my-zsh/themes/aboyce.zsh-theme ]]
 then
   echo "Zsh Theme: Removed existing link"
-  rm ~/.oh-my-zsh/themes/aboyce.zsh-theme 
+  rm ~/.oh-my-zsh/themes/aboyce.zsh-theme
 else
   echo "Zsh Theme: Had not been linked before"
 fi
