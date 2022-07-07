@@ -65,6 +65,8 @@ export NVM_DIR="$HOME/.nvm"
 # For a full list of active aliases, run `alias`.
 
 alias v="nvim"
+alias devm="cd ~/Source"
+alias devl="cd ~/source"
 
 ##################
 ## MANUAL STEPS ##
