@@ -18,7 +18,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 "" ----------------------------------------------------
 
 " TODO: UPDATE THE PLUGIN DIRECTORY TO MATCH
-call plug#begin('~/.config/nvim/plugins')
+call plug#begin('~/.config/nvim/plugins/vim-plug')
 
 " theme
 Plug 'gruvbox-community/gruvbox'
