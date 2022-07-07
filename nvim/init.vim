@@ -47,9 +47,46 @@ filetype plugin on
 "" CODE COMPLETION - START
 "" ----------------------------------------------------
 
+lua require('aboyce')
+
+let mapleader = " "
+
+" insert a line below
+nnoremap <leader>o o<Esc>
+" insert a line above
+nnoremap <leader>O O<Esc>
+
 " telescope configuration
 nnoremap <C-p> :lua require('telescope.builtin').find_files()<CR>
 nnoremap <C-g> :lua require('telescope.builtin').git_status()<CR>
+
+" Lists available help tags and opens a new window with the relevant help info on <cr>
+nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<cr> 
+
+" Lists files in your current working directory, respects .gitignore
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr> 
+" Lists git commits with diff preview, checkout action <cr>, reset mixed <C-r>m, reset soft <C-r>s and reset hard <C-r>h
+nnoremap <leader>gc <cmd>lua require('telescope.builtin').git_commits()<cr>
+" Lists all branches with log preview, checkout action <cr>, track action <C-t> and rebase action<C-r>
+nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<cr>
+"Lists current changes per file with diff preview and add action. (Multi-selection still WIP)
+nnoremap <leader>gs <cmd>lua require('telescope.builtin').git_status()<cr>
+"Lists stash items in current repository with ability to apply them on <cr>
+nnoremap <leader>gstash <cmd>lua require('telescope.builtin').git_stash()<cr>
+
+" Lists files in your current working directory, respects .gitignore
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+" Fuzzy search through the output of git ls-files command, respects .gitignore, optionally ignores untracked files
+nnoremap <leader>fgf <cmd>lua require('telescope.builtin').git_files()<cr>
+" Searches for the string under your cursor in your current working directory
+nnoremap <leader>fgs <cmd>lua require('telescope.builtin').grep_string()<cr>
+" Search for a string in your current working directory and get results live as you type (respecting .gitignore)ij
+nnoremap <leader>fgl <cmd>lua require('telescope.builtin').live_grep()<cr>
+
+" Lists open buffers in current neovim instance
+nnoremap <leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
+" Lists previously open files
+nnoremap <leader>p <cmd>lua require('telescope.builtin').oldfiles()<cr>
 
 " airline configuration
 let g:airline#extension#capslock#enabled = 1
@@ -86,9 +123,6 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm(): "\<C-g>u\<CR>
 "" CODE COMPLETION - END
 "" ----------------------------------------------------
 
-lua require('aboyce')
-
-let mapLeader = " "
 
 "" ----------------------------------------------------
 "" THE FOLLOWING SHOULD BE IN THE EXISTING CONFIG - CAN REMOVE
