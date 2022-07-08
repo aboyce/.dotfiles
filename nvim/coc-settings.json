@@ -23,6 +23,7 @@
   "markdownlint.onOpen": false,
   "markdownlint.onSave": true,
   "markdownlint.config": {
-    "line_length": false
+    "line_length": false,
+    "first-line-h1": false
   }
 }
