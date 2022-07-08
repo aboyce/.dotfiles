@@ -61,10 +61,10 @@ nnoremap <C-p> :lua require('telescope.builtin').find_files()<CR>
 nnoremap <C-g> :lua require('telescope.builtin').git_status()<CR>
 
 " Lists available help tags and opens a new window with the relevant help info on <cr>
-nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<cr> 
+nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " Lists files in your current working directory, respects .gitignore
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr> 
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 " Lists git commits with diff preview, checkout action <cr>, reset mixed <C-r>m, reset soft <C-r>s and reset hard <C-r>h
 nnoremap <leader>gc <cmd>lua require('telescope.builtin').git_commits()<cr>
 " Lists all branches with log preview, checkout action <cr>, track action <C-t> and rebase action<C-r>
@@ -123,6 +123,14 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm(): "\<C-g>u\<CR>
 "" CODE COMPLETION - END
 "" ----------------------------------------------------
 
+" window splitting
+set splitbelow
+set splitright
+
+nnoremap <leader>h <C-W><C-H>
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>k <<C-W><C-K>
+nnoremap <leader>l <C-W><C-L>
 
 "" ----------------------------------------------------
 "" THE FOLLOWING SHOULD BE IN THE EXISTING CONFIG - CAN REMOVE
