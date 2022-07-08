@@ -127,6 +127,9 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm(): "\<C-g>u\<CR>
 set splitbelow
 set splitright
 
+nnoremap <leader>- :new<cr>
+nnoremap <leader><Bar> :vnew<cr>
+
 nnoremap <leader>h <C-W><C-H>
 nnoremap <leader>j <C-W><C-J>
 nnoremap <leader>k <<C-W><C-K>
