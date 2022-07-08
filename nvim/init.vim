@@ -140,6 +140,10 @@ nnoremap <leader>l <C-W><C-L>
 "" ----------------------------------------------------
 
 colorscheme gruvbox
+
+set spell
+set spelllang=en_gb
+
 set number
 set relativenumber
 set hidden
