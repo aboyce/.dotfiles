@@ -5,6 +5,6 @@
 How to install:
 
 ```bash
-# ensure you are this repository
+# ensure you are executing from this repository
 ./install.sh
 ```
