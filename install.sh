@@ -21,15 +21,15 @@ ln -sf "$(pwd)/tmux/" ~/.config/
 echo "Tmux: Linked up configuration"
 
 # vim
-if [[ -d ~/.vim ]]
-then
-  echo "Vim: Removed existing link"
-  rm -f ~/.vim
-else
-  echo "Vim: Had not been linked before"
-fi
-ln -sf "$(pwd)/vim/.vim" ~/
-echo "Vim: Linked up configuration"
+# if [[ -d ~/.vim ]]
+# then
+#   echo "Vim: Removed existing link"
+#   rm -f ~/.vim
+# else
+#   echo "Vim: Had not been linked before"
+# fi
+# ln -sf "$(pwd)/vim/.vim" ~/
+# echo "Vim: Linked up configuration"
 
 # nvim
 if [[ -d ~/.config/nvim ]]
