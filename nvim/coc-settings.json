@@ -1,0 +1,29 @@
+{
+  "colors.filetypes": ["*"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "json",
+    "markdown",
+    "html",
+    "css",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.semi": false,
+  "prettier.trailingComma": "all",
+
+  "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
+
+  "markdownlint.onChange": true,
+  "markdownlint.onOpen": false,
+  "markdownlint.onSave": true,
+  "markdownlint.config": {
+    "line_length": false,
+    "first-line-h1": false
+  }
+}
