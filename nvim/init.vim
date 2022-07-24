@@ -36,8 +36,16 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-telescope/telescope.nvim'
 
+" LSP (Language Server Protocol)
+Plug 'neovim/nvim-lspconfig'
+
 " Code Completion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
 
 call plug#end()
 
@@ -170,38 +178,12 @@ filetype plugin on
 " -----------------
 let g:airline#extension#capslock#enabled = 1
 let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#coc#enabled = 1
 " Fix a layout issue in the bottom right corner
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.colnr = ' '
 
-" COC - General
-" ----------------
-" Trigger code completion
-inoremap <silent><expr> <c-space> coc#refresh()
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm(): "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-" COC - Extensions
-" ----------------
-let g:coc_global_extensions = [
-  \ 'coc-json',
-  \ 'coc-yaml',
-  \ 'coc-markdownlint',
-  \ 'coc-prettier',
-  \ 'coc-eslint',
-  \ 'coc-highlight',
-\]
-
-" COC - Highlight
-" ----------------
-" Allow coc-highlight to work
-" set termguicolors
-" Allow coc-highlight to open
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Telescope - General
 " ------------------
