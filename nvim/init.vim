@@ -36,14 +36,16 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-telescope/telescope.nvim'
 
-" LSP (Language Server Protocol)
+" Native LSP (Language Server Protocol)
 Plug 'neovim/nvim-lspconfig'
 
-" Code Completion
+" Native Code Completion
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
+
+" Native Code Completion - Luasnip
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
