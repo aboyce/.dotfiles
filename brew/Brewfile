@@ -1,5 +1,4 @@
 # Brew Core
-tap "caskroom/cask"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
