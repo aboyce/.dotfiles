@@ -1,0 +1,37 @@
+# Brew Core
+tap "caskroom/cask"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+brew "bash-completion"
+
+# Development Tools
+brew "git"
+brew "curl"
+brew "zsh-autosuggestions"
+brew "tmux"
+brew "neovim"
+brew "ripgrep"
+brew "gnupg"
+brew "kubernetes-cli"
+
+# Development - Go
+brew "go"
+
+# Development - Rust
+brew "rustup-init"
+
+# Development - TypeScript
+brew "yarn"
+
+# Markdown
+brew "glow"
+
+# MacOS Applications
+cask "middle"
+cask "firefox"
+cask "google-chrome"
+cask "grammarly-desktop"
+cask "spotify"
+cask "whatsapp"
+cask "zulip"
