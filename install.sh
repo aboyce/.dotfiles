@@ -9,6 +9,17 @@ else
   echo "Pre-Reqs: .config folder did not exist, created"
 fi
 
+# brew
+if [[ -f ~/Brewfile ]]
+then
+  echo "Brew: Removed existing link"
+  rm ~/Brewfile
+else
+  echo "Brew: Had not been linked before"
+fi
+ln -sf "$(pwd)/brew/Brewfile" ~/Brewfile
+echo "Brew: Linked up configuration"
+
 # tmux
 if [[ -d ~/.config/tmux ]]
 then
