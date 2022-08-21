@@ -28,8 +28,9 @@ brew "glow"
 
 # MacOS Applications
 cask "middle"
-cask "firefox"
+cask "brave-browser"
 cask "google-chrome"
+cask "firefox"
 cask "grammarly-desktop"
 cask "spotify"
 cask "whatsapp"
