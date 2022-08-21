@@ -2,11 +2,11 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-brew "bash-completion"
 
 # Development Tools
 brew "git"
 brew "curl"
+brew "bash-completion"
 brew "zsh-autosuggestions"
 brew "tmux"
 brew "neovim"
