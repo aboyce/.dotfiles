@@ -1,3 +1,5 @@
-require('aboyce.lsp')
 require('aboyce.telescope')
-require('aboyce.codecompletion')
+
+-- Re-enable to include the native lsp and code completion.
+-- require('aboyce.lsp')
+-- require('aboyce.codecompletion')
