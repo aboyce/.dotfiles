@@ -1,13 +1,12 @@
 # Brew Core
-tap "caskroom/cask"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-brew "bash-completion"
 
 # Development Tools
 brew "git"
 brew "curl"
+brew "bash-completion"
 brew "zsh-autosuggestions"
 brew "tmux"
 brew "neovim"
@@ -29,8 +28,9 @@ brew "glow"
 
 # MacOS Applications
 cask "middle"
-cask "firefox"
+cask "brave-browser"
 cask "google-chrome"
+cask "firefox"
 cask "grammarly-desktop"
 cask "spotify"
 cask "whatsapp"

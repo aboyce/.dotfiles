@@ -43,6 +43,12 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+# Go
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix go)/libexec"
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
 #  _____        _                             _
 # | ____|__  __| |_  ___  _ __  _ __    __ _ | |
 # |  _|  \ \/ /| __|/ _ \| '__|| '_ \  / _` || |
