@@ -1,0 +1,3 @@
+# MacOS Applications
+cask "grammarly-desktop"
+cask "whatsapp"
