@@ -27,3 +27,6 @@ TypeScript
 Firehose
 JSON
 EventBridge
+SNS
+SQS
+SES
