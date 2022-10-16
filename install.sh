@@ -20,6 +20,26 @@ fi
 ln -sf "$(pwd)/brew/Brewfile" ~/Brewfile
 echo "Brew: Linked up configuration"
 
+if [[ -f ~/Brewfile.work ]]
+then
+  echo "Brew: Removed existing link to work file"
+  rm ~/Brewfile.work
+else
+  echo "Brew: Work file had not been linked before"
+fi
+ln -sf "$(pwd)/brew/Brewfile.work" ~/Brewfile.work
+echo "Brew: Linked up configuration work configuration"
+
+if [[ -f ~/Brewfile.personal ]]
+then
+  echo "Brew: Removed existing link to personal file"
+  rm ~/Brewfile.personal
+else
+  echo "Brew: Personal file had not been linked before"
+fi
+ln -sf "$(pwd)/brew/Brewfile.personal" ~/Brewfile.personal
+echo "Brew: Linked up configuration personal configuration"
+
 # tmux
 if [[ -d ~/.config/tmux ]]
 then
