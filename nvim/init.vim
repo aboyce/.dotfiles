@@ -39,6 +39,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-telescope/telescope.nvim'
 
+" Git Information
+Plug 'APZelos/blamer.nvim'
+
 call plug#end()
 
 "   ____                                 _
@@ -56,8 +59,8 @@ let mapleader = " "
 " Keep a buffer in the background in case you forget to save
 set hidden
 
-" Prevent the text from wrapping
-set nowrap
+" Wrap the text 
+set wrap
 
 " Start scrolling when you are close to the edge of the file
 set scrolloff=8
@@ -81,6 +84,10 @@ set number
 
 " Show the relative number to the current line
 set relativenumber
+
+autocmd FileType markdown hi Pmenu ctermfg=Black ctermbg=White
+autocmd FileType markdown hi PmenuSel ctermfg=Black ctermbg=White
+autocmd FileType markdown hi FgCocErrorFloatBgCocFloating ctermfg=Black ctermbg=White guifg=White guibg=Black
 
 " __        __ _             _
 " \ \      / /(_) _ __    __| |  ___ __      __ ___
@@ -290,7 +297,7 @@ nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
 nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <space>sd  :<C-u>CocList outline<cr>
 " Search workspace symbols.
 nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
@@ -362,6 +369,17 @@ nnoremap <leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
 " ------------------------------
 " Lists previously open files
 nnoremap <leader>p <cmd>lua require('telescope.builtin').oldfiles()<cr>
+
+" Git Blamer
+" ----------
+let g:blamer_enabled = 0
+let g:blamer_delay = 250
+let g:blamer_show_in_visual_modes = 1
+let g:blamer_show_in_insert_modes = 0
+let g:blamer_prefix = ' > '
+let g:blamer_template = '<committer> <summary>' " <author>, <author-mail>, <author-time>, <committer>, <committer-mail>, <committer-time>, <summary>, <commit-short>, <commit-long>
+let g:blamer_date_format = '%d/%m/%y %H:%M'
+let g:blamer_relative_time = 1
 
 "  _____  _  _    _
 " |_   _|(_)| |_ | |  ___  ___
