@@ -1,4 +1,3 @@
 # MacOS Applications
 cask "webex"
-cask "zulip"
 cask "zoom"
