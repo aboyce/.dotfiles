@@ -14,11 +14,13 @@ brew "ripgrep"
 brew "gnupg"
 brew "kubernetes-cli"
 
+# Development - Python
+
 # Development - Go
-brew "go"
+# brew "go"
 
 # Development - Rust
-brew "rustup-init"
+# brew "rustup-init"
 
 # Development - TypeScript
 brew "yarn"
